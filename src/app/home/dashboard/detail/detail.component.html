@@ -1,0 +1,12 @@
+<h3>
+  Student Detail(Parent component)
+</h3>
+<div id="listcontainer">
+<ul style="list-style: none;">
+ <li>Roll no- {{student?.Id}}</li>
+ <li>Name - {{student?.name}}</li>
+ <li>Contact number- {{student?.contactNumber}}</li>
+ <li><button class="btn btn-success btn-sm" (click)="selectStudent(student?.Id)">Select Student</button></li>
+  </ul>
+</div>
+

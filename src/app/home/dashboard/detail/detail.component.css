@@ -1,0 +1,12 @@
+li {
+    padding:5px 0 5px 0;
+    text-align:left;
+}
+
+ul {
+    list-style: none;
+}
+
+#listcontainer {
+    padding-left: 80px;
+}

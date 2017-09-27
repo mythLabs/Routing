@@ -1,0 +1,20 @@
+<h2>
+  Dashboard Page!
+</h2>
+<hr>
+
+<div class="container">
+    <div class="row">
+      <div class="col-lg-6">
+        <h3>
+          Enrolled Students(Child component)
+       </h3>
+        <ul >
+          <li *ngFor="let student of students" ><button [ngClass]="{'btn btn-success': student.Id==selectedStudentId,'btn btn-primary': student.Id!=selectedStudentId }" (click)="displaydetail(student)">{{student.name}}</button></li>
+        </ul>
+        </div>
+        <div class="col-lg-6">
+          <app-detail [studentId]="studentId" (seletedStudent)="selectStudent($event)"></app-detail>
+        </div>
+      </div>
+  </div>

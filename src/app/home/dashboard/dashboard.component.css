@@ -1,0 +1,10 @@
+a {
+    cursor: pointer;
+}
+li {
+    padding:5px 0 5px 0;
+}
+
+ul {
+    list-style: none;
+}
