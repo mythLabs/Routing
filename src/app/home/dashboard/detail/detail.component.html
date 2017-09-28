@@ -1,12 +1,14 @@
 <h3>
-  Student Detail(Parent component)
+  Student Detail(Child component)
 </h3>
 <div id="listcontainer">
 <ul style="list-style: none;">
- <li>Roll no- {{student?.Id}}</li>
+ <li>Roll no- {{student?.Id |updateRollNo}}</li>
  <li>Name - {{student?.name}}</li>
  <li>Contact number- {{student?.contactNumber}}</li>
- <li><button class="btn btn-success btn-sm" (click)="selectStudent(student?.Id)">Select Student</button></li>
+ <li><button class="btn btn-success btn-sm" *ngIf="student!= undefined" (click)="selectStudent(student?.Id)">Select Student</button>
+     <button class="btn btn-success btn-sm" *ngIf="student!= undefined" (click)="openEdit()">Edit Student</button> 
+    </li>
   </ul>
 </div>
 

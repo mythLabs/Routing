@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 import {apiService} from '../../Services/app.apiService';
 import {Student} from '../../Models/Student';
 
@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   students:Student[];
   studentId:number;
   selectedStudentId:number;
+ 
   constructor(private apiService:apiService) { }
 
   ngOnInit() {

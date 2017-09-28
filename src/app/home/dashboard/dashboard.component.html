@@ -7,7 +7,7 @@
     <div class="row">
       <div class="col-lg-6">
         <h3>
-          Enrolled Students(Child component)
+          Enrolled Students(Parent component)
        </h3>
         <ul >
           <li *ngFor="let student of students" ><button [ngClass]="{'btn btn-success': student.Id==selectedStudentId,'btn btn-primary': student.Id!=selectedStudentId }" (click)="displaydetail(student)">{{student.name}}</button></li>

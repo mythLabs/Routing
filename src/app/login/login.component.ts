@@ -9,9 +9,8 @@ import { ViewContainerRef } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  username:string;
-  password:string;
-
+  Username:string;
+  Password:string;
   constructor(private loginService:loginService,public toastr: ToastsManager, vcr: ViewContainerRef) {
     this.toastr.setRootViewContainerRef(vcr);
    }
@@ -20,8 +19,8 @@ export class LoginComponent implements OnInit {
   }
 
   logIn() {
-    if(this.username!= "" && this.username!=null &&this.username!=undefined) {
-       if(!this.loginService.onLogin(this.username,this.password)) {
+    if(this.Username!= "" && this.Username!=null &&this.Username!=undefined) {
+       if(!this.loginService.onLogin(this.Username,this.Password)) {
           this.toastr.error('Please enter correct username and password', 'Alert!');
        }
     } else{

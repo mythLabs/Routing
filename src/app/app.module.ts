@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
  import {ToastModule} from 'ng2-toastr/ng2-toastr';
  import {HttpClientModule} from '@angular/common/http';
+ import { NgLoadingBarModule } from 'ng-loading-bar';
 
 import { RouterModule, Routes } from '@angular/router';
-import { FormsModule }   from '@angular/forms';
+import { FormsModule,ReactiveFormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
@@ -20,6 +21,8 @@ import {guard} from './Guard/app.guard';
 import { SettingsComponent } from './Home/settings/settings.component';
 import { ServicesComponent } from './Home/services/services.component';
 import { DetailComponent } from './Home/dashboard/detail/detail.component';
+import { RegisterComponent } from './Home/register/register.component';
+import { UpdateRollNoPipe } from './Pipes/update-roll-no.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent,canActivate: [guard] },
@@ -29,7 +32,9 @@ const appRoutes: Routes = [
                  {path:'dashboard',component:DashboardComponent},
                  {path:'contactus',component:ContactUsComponent},
                  {path:'settings',component:SettingsComponent},
-                 {path:'services',component:ServicesComponent}
+                 {path:'services',component:ServicesComponent},
+                 {path:'registration',component:RegisterComponent},
+                 {path:'edit/:id',component:RegisterComponent}
                ] },
   { path: 'login', component: LoginComponent }
   
@@ -44,7 +49,9 @@ const appRoutes: Routes = [
     DashboardComponent,
     SettingsComponent,
     ServicesComponent,
-    DetailComponent
+    DetailComponent,
+    RegisterComponent,
+    UpdateRollNoPipe
   ],
   imports: [
     BrowserModule,
@@ -52,7 +59,7 @@ const appRoutes: Routes = [
       appRoutes
     ),
     FormsModule, BrowserAnimationsModule, ToastModule.forRoot(),
-    HttpClientModule
+    HttpClientModule,ReactiveFormsModule,NgLoadingBarModule.forRoot()
   ],
   providers: [loginService,guard,apiService],
   bootstrap: [AppComponent]

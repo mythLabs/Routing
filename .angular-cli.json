@@ -21,7 +21,8 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css"
+        "../node_modules/ng2-toastr/bundles/ng2-toastr.min.css",
+        "../node_modules/ng-loading-bar/loading-bar.css"
       ],
       "scripts": ["../node_modules/bootstrap/dist/js/bootstrap.js",
                   "../node_modules/ng2-toastr/bundles/ng2-toastr.min.js"],
